@@ -81,11 +81,11 @@ export const withNextInputAutoFocusInput = Input => {
     static contextTypes = withNextInputAutoFocusContextType;
 
     setInput = component => {
-      this.context.setInput(this.props.name, component);
+      this.context.setInput(this.props.field.name, component);
     };
 
     onSubmitEditing = () => {
-      this.context.handleSubmitEditing(this.props.name);
+      this.context.handleSubmitEditing(this.props.field.name);
       if (this.props.onSubmitEditing) this.props.onSubmitEditing();
     };
 
