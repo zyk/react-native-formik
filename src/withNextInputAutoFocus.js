@@ -85,6 +85,9 @@ export const withNextInputAutoFocusInput = Input => {
     };
 
     onSubmitEditing = () => {
+      if (this.props.multiline)
+        return;
+
       this.context.handleSubmitEditing(this.props.field.name);
       if (this.props.onSubmitEditing) this.props.onSubmitEditing();
     };
